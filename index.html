@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="description"
         content="ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="NeRF, Object Pose, Camera Pose">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -91,26 +91,27 @@
           <h1 class="title is-1 publication-title">ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Weiyao Wang</a><sup></sup>,</span>
+              <a href="https://sites.google.com/view/weiyaowang/home">Weiyao Wang</a><sup></sup>,</span>
             <span class="author-block">
-              <a href=""> Pierre Gleize</a><sup>*</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=4imOcw4AAAAJ&hl=en"> Pierre Gleize</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="">Hao Tang</a><sup>*</sup>,
+              <a href="https://tanghaotommy.github.io/">Hao Tang</a><sup>*</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xingyu Chen</a><sup></sup>,
+              <a href="https://scholar.google.com/citations?user=gjSHr6YAAAAJ&hl=en">Xingyu Chen</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="">Kevin J Liang</a><sup></sup>,
+              <a href="https://kevinjliang.github.io/">Kevin J Liang</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="">Matt Feiszli</a><sup></sup>,
+              <a href="https://scholar.google.com/citations?user=A-wA73gAAAAJ&hl=en">Matt Feiszli</a><sup></sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup></sup>FAIR, Meta</span> <br />
-            <span class="author-block"><sup>*</sup>Equal contribution</span>
+            <span class="author-block"><sup>*</sup>Equal contribution</span> <br />
+            <span class="author-block"><sup></sup><i>To Appear at CVPR 2024</i></span>
           </div>
 
           <div class="column has-text-centered">
@@ -151,7 +152,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming soon!)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -176,11 +177,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <!-- <source src="./static/videos/teaser.mp4"
-                type="video/mp4"> -->
+        <source src="./static/videos/Teaser.mp4"
+                type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        [Insert Teaser image here] ICON reconstructs objects from any video without depending on depth information or poses..
+        ICON 3D-fy (pose+shape+texture) objects from ANY video without depending on depth or pose.
       </h2>
     </div>
   </div>
@@ -190,56 +191,44 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <p> Insert video examples here </p>
+      <p> Shape and pose evolution over time. </p>
       <div id="results-carousel" class="carousel results-carousel">
-        <!-- <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+        <div class="item item-combo_toycar">
+          <video poster="" id="combo_toycar" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/toycar.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+        <div class="item item-combo_Pig">
+          <video poster="" id="combo_Pig" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/Pig.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+        <div class="item item-combo_hint">
+          <video poster="" id="combo_hint" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/hint2.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+        <div class="item item-combo_plant">
+          <video poster="" id="combo_plant" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/plant.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        <div class="item item-combo_Camera">
+          <video poster="" id="combo_Camera" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/Camera.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        <div class="item item-combo_bench">
+          <video poster="" id="combo_bench" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/CombinedEvo/Bench.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
       </div>
     </div>
   </div>
@@ -286,20 +275,19 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
+    <h2 class="title is-2">Applications in-the-wild</h2>
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Input recordings</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Take a monocular GoPro video of tennis swing demo
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <!-- <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4"> -->
+          <video id="tennis_orig" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/expert_individual/orig.mov"
+                    type="video/mp4">
           </video>
         </div>
       </div>
@@ -307,16 +295,47 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Racket pose</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              ICON predicts accurate racket poses
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <!-- <source src="./static/videos/matting.mp4"
-                      type="video/mp4"> -->
+            <video id="tennis_pose" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/expert_individual/pose.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">View synthesis</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Completes out-of-view part of the racket
+            </p>
+            <video id="tennis_nvs" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/expert_individual/nvs.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title is-3">Mesh Extraction</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Turns racket into 3D mesh asset
+            </p>
+            <video id="tennis_racket" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/expert_individual/Racket.mov"
+                      type="video/mp4">
             </video>
           </div>
 
@@ -326,12 +345,12 @@
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -341,9 +360,9 @@
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <!-- <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
-                 alt="Interpolate start reference image."/> -->
+                 alt="Interpolate start reference image."/>
             <p>Start Frame</p>
           </div>
           <div class="column interpolation-video-column">
@@ -355,17 +374,17 @@
                    step="1" min="0" max="100" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
-            <!-- <img src="./static/images/interpolate_end.jpg"
+            <img src="./static/images/interpolate_end.jpg"
                  class="interpolation-image"
-                 alt="Interpolation end reference image."/> -->
+                 alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
+        <br/> -->
+        <!-- / Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -379,14 +398,14 @@
                  preload
                  playsinline
                  width="75%">
-            <!-- <source src="./static/videos/replay.mp4"
-                    type="video/mp4"> -->
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
 
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
     <!--/ Animation. -->
 
     <!-- TODO: delete these -->
@@ -427,7 +446,7 @@
     <pre><code>@article{wang2024icon,
       title={ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization},
       author={Wang, Weiyao and Gleize, Pierre and Tang, Hao and Chen, Xingyu and Liang, Kevin J and Feiszli, Matt},
-      journal={arXiv preprint arXiv:2401.08937},
+      journal={CVPR},
       year={2024}
     }</code></pre>
   </div>
@@ -437,13 +456,13 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
+      <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
+      </a> -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
