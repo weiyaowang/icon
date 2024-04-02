@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -104,7 +104,7 @@
               <a href="https://kevinjliang.github.io/">Kevin J Liang</a><sup></sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=A-wA73gAAAAJ&hl=en">Matt Feiszli</a><sup></sup>,
+              <a href="https://scholar.google.com/citations?user=A-wA73gAAAAJ&hl=en">Matt Feiszli</a><sup></sup>
             </span>
           </div>
 
@@ -248,7 +248,7 @@
             Recent works have attempted to relax this constraint, but they still often rely on decent initial poses which they can refine. 
             Here we aim at removing the requirement for pose initialization. We present Incremental CONfidence (ICON), an optimization procedure for training NeRFs from 2D video frames. 
             ICON only assumes smooth camera motion to estimate initial guess for poses.  
-            Further, ICON introduces ``confidence": an adaptive measure of model quality used to dynamically reweight gradients. 
+            Further, ICON introduces "confidence": an adaptive measure of model quality used to dynamically reweight gradients. 
             ICON relies on high-confidence poses to learn NeRF, and high-confidence 3D structure (as encoded by NeRF) to learn poses. 
             We show that ICON, without prior pose initialization, achieves superior performance in both CO3D and HO3D versus methods which use SfM pose.
           </p>
@@ -283,7 +283,7 @@
         <div class="content">
           <h2 class="title is-3">Input recordings</h2>
           <p>
-            Take a monocular GoPro video of tennis swing demo
+            Take a single-view monocular GoPro video of tennis swing demo
           </p>
           <video id="tennis_orig" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/expert_individual/orig_blurred.mov"
@@ -342,6 +342,100 @@
         </div>
       </div>
     </div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2">Common failure modes of existing methods</h2>
+        <h2 class="title is-3">Bas Relief</h2>
+        <div class="columns is-centered">
+          
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content content">
+              <h2 class="title is-4">Pose Estimation vs. GT</h2>
+              <img src="./static/images/AppleGBR.png"
+                      alt="a reverted trajectory">
+              <p>
+                Trajectory is inverted by 180 degree along z-axis
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content content">
+              <h2 class="title is-4">Reconstruction</h2>
+              <video id="gbr_apple" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/FailureModes/Apple_GBR.mp4"
+                        type="video/mp4">
+              </video>
+              <p>
+                A concave appled inside the table.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="title is-3">Fragmentation</h2>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content content">
+              <h2 class="title is-4">Pose Estimation vs. GT</h2>
+              <img src="./static/images/Fragmentation.png"
+                      alt="a fragmented trajectory">
+              <p>
+                Pose and NeRF break apart, producing sepa- rate, mutually invisible radiance fields.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <h2 class="title is-4">Reconstruction</h2>
+                <video id="framentation" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/FailureModes/ToyTruck_Fragmentation.mp4"
+                          type="video/mp4">
+                </video>
+                <p>
+                  A tube of stacked toytrucks that the camera flies through like a flipbook
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="title is-3">Overlapping Registration</h2>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content content">
+              <h2 class="title is-4">Pose Estimation vs. GT</h2>
+              <img src="./static/images/Overlapping.png"
+                      alt="an overlapped trajectory">
+              <p>
+                Two subsets of the pose trajectory are trapped in a local minimum, incorrectly observing the same part of the radiance field, leading to blurry rendering and empty voxels.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <h2 class="title is-4">Reconstruction</h2>
+                <video id="overlapping" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/FailureModes/Toaster_Overlapping_Registration.mp4"
+                          type="video/mp4">
+                </video>
+                <p>
+                  One side of the toaster is blurry due to over- lapping views, while the other has no views and is vacant.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="title is-3">Other Pose-free NeRFs</h2>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content content">
+              <img src="./static/images/Rebuttal_Baseline.png"
+                      alt="Failures of other methods">
+            </div>
+          </div>
+        </div>
     <!--/ Matting. -->
 
     <!-- Animation. -->
